@@ -1,0 +1,5 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* se quiser, mais pra frente a gente coloca globals aqui, mas por enquanto
+   deixa só isso pra garantir que Tailwind está rodando */

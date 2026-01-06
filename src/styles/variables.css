@@ -1,0 +1,33 @@
+/* ============================
+   Fonte global
+============================ */
+:root {
+  --font-main: "Poppins", sans-serif;
+
+  /* PALETA BASE (modo claro) */
+  --color-bg: #342140;
+  --color-text: #ececfb;
+
+  /* Roxos modernos */
+  --accent: #7C4DFF;
+  --accent-light: #9B5CFF;
+
+  /* legado */
+  --color-primary: var(--accent);
+  --color-accent: var(--accent-light);
+}
+
+/* ============================
+   MODO ESCURO
+============================ */
+.dark {
+  --color-bg: #181728;
+  --color-text: #f5f0e8f0;
+
+  --accent: #7C4DFF;
+  --accent-light: #9B5CFF;
+
+  /* legado */
+  --color-primary: var(--accent);
+  --color-accent: var(--accent-light);
+}

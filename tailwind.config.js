@@ -1,12 +1,20 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "bg-primary": "var(--color-bg)",
+        "text-primary": "var(--color-text)",
+
+        neon: "var(--accent)",
+        "neon-light": "var(--accent-light)",
+      },
+
+      fontFamily: {
+        main: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

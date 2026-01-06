@@ -1,5 +1,36 @@
-/* src/index.css */
+@import "./styles/variables.css";
 @import "tailwindcss";
 
-/* se quiser, mais pra frente a gente coloca globals aqui, mas por enquanto
-   deixa só isso pra garantir que Tailwind está rodando */
+/* ==========================================
+   Globals (sem @apply)
+========================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* estilos globais simples (não Tailwind utilities) */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* títulos globais */
+h1, h2, h3, h4 {
+  font-family: var(--font-main);
+  color: var(--color-text);
+}
+
+/* links */
+a {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-light);
+}

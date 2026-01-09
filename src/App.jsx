@@ -3,17 +3,23 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Background from "./components/Background";
 
 export default function App() {
   return (
-    <div className=" text-white">
-      <Navbar />
+    <>
+      {/* Fundo global */}
+      <Background />
 
-      {/* Seções principais */}
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+      {/* Conteúdo */}
+      <div className="relative text-white">
+        <Navbar />
+
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Atom, Wind, Code, Database, Palette } from "lucide-react";
+import { ReactTyped } from "react-typed";
 
 export default function Hero() {
   const glowRef = useRef(null);
@@ -7,17 +8,12 @@ export default function Hero() {
   useEffect(() => {
     const glow = glowRef.current;
     if (!glow) return;
-
-    // Desativa em mobile
     if (window.innerWidth < 768) return;
 
     const handleMouseMove = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-
       glow.style.background = `
         radial-gradient(
-          600px at ${x}px ${y}px,
+          600px at ${e.clientX}px ${e.clientY}px,
           rgba(168, 85, 247, 0.15),
           transparent 70%
         )
@@ -25,10 +21,7 @@ export default function Hero() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return (
@@ -52,9 +45,17 @@ export default function Hero() {
       />
 
       {/* Conteúdo */}
-      <div className="mt-10 relative z-10 flex flex-col items-center text-center px-6">
+      <div className="mt-10 relative gap-6 z-10 flex flex-col items-center text-center px-6">
         <h1 className="text-4xl md:text-6xl font-bold text-purple-400">
-          Desenvolvedor Front-end
+          <ReactTyped
+            strings={[
+              "Meu nome é Filipe, sou Desenvolvedor Web",
+              "Construo interfaces modernas e escaláveis",
+            ]}
+            typeSpeed={85}
+            backSpeed={60}
+            loop
+          />
         </h1>
 
         <p className="mt-10 max-w-2xl text-lg md:text-xl text-white/80">

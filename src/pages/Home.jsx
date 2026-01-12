@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
+import WhyWorkWithMe from "../components/WhyWorkWithMe";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
       <HowItWorks />
+      <WhyWorkWithMe />
 
       {/* Projetos em destaque */}
       {/* <ProjectsPreview /> */}

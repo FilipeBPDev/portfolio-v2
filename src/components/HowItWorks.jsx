@@ -1,3 +1,7 @@
+import briefingImg from "../assets/img/img1.jpg";
+import visualImg from "../assets/img/img2.jpg";
+import devImg from "../assets/img/img3.jpg";
+import deliveryImg from "../assets/img/img4.jpg";
 import { useEffect, useRef } from "react";
 import { Lightbulb, Palette, Code2, Rocket } from "lucide-react";
 
@@ -28,21 +32,25 @@ export default function HowItWorks() {
       icon: Lightbulb,
       title: "Entendimento & briefing",
       desc: "Alinhamos objetivos, expectativas e referências antes de qualquer decisão. Nada é feito sem clareza.",
+      image: briefingImg, // sugestão: reunião ou brainstorming
     },
     {
       icon: Palette,
       title: "Alinhamento visual",
       desc: "Apresento a direção visual inicial para validação, garantindo que o projeto siga o que você imaginou.",
+      image: visualImg, // sugestão: wireframe ou tela de design
     },
     {
       icon: Code2,
-      title: "Desenvolvimento com acompanhamento",
+      title: "Desenvolvimento",
       desc: "Você acompanha a evolução do projeto com checkpoints e feedback contínuo, evitando retrabalho.",
+      image: devImg, // sugestão: tela de código ou dev trabalhando
     },
     {
       icon: Rocket,
       title: "Entrega validada",
       desc: "Entrega final após ajustes, com tudo revisado, testado e alinhado ao que foi combinado.",
+      image: deliveryImg, // sugestão: mockup final ou cliente feliz
     },
   ];
 
@@ -68,16 +76,17 @@ export default function HowItWorks() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-purple-400">
-            Como funciona
+            Metodologia de Desenvolvimento
           </h2>
           <p className="mt-6 text-white/70 max-w-2xl mx-auto">
-            Um processo claro, com comunicação constante e entregas alinhadas às
-            suas expectativas.
+            Do briefing inicial à entrega final, sigo um processo colaborativo
+            com mini checkpoints e entregas contínuas. Esse fluxo inspirado no
+            método ágil garante clareza, alinhamento e resultados consistentes.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -94,17 +103,20 @@ export default function HowItWorks() {
                 />
 
                 <div className="relative z-10 flex flex-col items-center text-center">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="mb-6 rounded-xl w-full h-32 object-cover shadow-md"
+                  />
                   <div
-                    className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl
-                                  bg-purple-600/20 text-purple-400"
+                    className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl
+                                bg-purple-600/20 text-purple-400"
                   >
-                    <Icon size={28} />
+                    <Icon size={24} />
                   </div>
-
-                  <h3 className="text-lg font-semibold text-white mb-3">
+                  <h3 className="text-lg font-semibold text-white mb-2">
                     {step.title}
                   </h3>
-
                   <p className="text-sm text-white/70">{step.desc}</p>
                 </div>
               </div>

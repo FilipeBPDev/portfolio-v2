@@ -55,7 +55,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="relative py-32 overflow-hidden">
+    <section id="how-it-works" className="relative py-20 overflow-hidden">
       {/* Glow */}
       <div
         ref={glowRef}

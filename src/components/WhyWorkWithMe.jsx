@@ -49,7 +49,7 @@ export default function WhyWorkWithMe() {
   ];
 
   return (
-    <section className="relative py-40 overflow-hidden">
+    <section className="relative py-20 overflow-hidden">
       {/* Glow */}
       <div
         ref={glowRef}

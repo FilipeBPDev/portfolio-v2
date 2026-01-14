@@ -1,17 +1,18 @@
-/* ============================
-   Fonte global
-============================ */
 :root {
   --font-main: "Poppins", sans-serif;
 
-  /* PALETA BASE (modo claro) */
-  /*--color-bg: #342140;*/
-  --color-bg: #342140;
-  --color-text: #ececfb;
+  /* Light theme base */
+  --color-bg: #f6f4fb;        /* fundo claro com leve roxo */
+  --color-bg-soft: #ffffff;   /* cards / navbar */
+  --color-text: #2b2340;      /* texto escuro sofisticado */
+  --color-text-soft: #5a5275;
 
-  /* Roxos modernos */
+  /* Roxo principal (branding) */
   --accent: #7C4DFF;
   --accent-light: #9B5CFF;
+
+  /* Sombras */
+  --shadow-soft: 0 10px 30px rgba(124, 77, 255, 0.12);
 
   /* legado */
   --color-primary: var(--accent);
@@ -19,16 +20,19 @@
 }
 
 /* ============================
-   MODO ESCURO
+   DARK MODE
 ============================ */
 .dark {
   --color-bg: #181728;
+  --color-bg-soft: #1f1e33;
   --color-text: #f5f0e8f0;
+  --color-text-soft: #b7b3d6;
 
   --accent: #7C4DFF;
   --accent-light: #9B5CFF;
 
-  /* legado */
+  --shadow-soft: 0 20px 50px rgba(124, 77, 255, 0.25);
+
   --color-primary: var(--accent);
   --color-accent: var(--accent-light);
 }

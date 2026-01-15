@@ -74,6 +74,12 @@ export default function Projects() {
                          p-6 rounded-2xl border border-white/10 
                          bg-white/5 backdrop-blur-xl
                          hover:border-purple-400/30 transition"
+              style={{
+                background: "var(--color-card-bg)",
+                border: "1px solid var(--color-card-border)",
+                backdropFilter: "blur(12px)",
+                boxShadow: "var(--shadow-card)",
+              }}
             >
               {/* Index */}
               <div className="text-4xl font-bold text-purple-400 shrink-0">
@@ -95,6 +101,7 @@ export default function Projects() {
                       className="text-xs px-3 py-1 rounded-full 
                                  bg-purple-500/10 text-purple-300 
                                  border border-purple-400/20"
+                      style={{ color: "var(--color-button-text)" }}
                     >
                       {tag}
                     </span>
@@ -107,6 +114,7 @@ export default function Projects() {
                 <a
                   href="#"
                   className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition"
+                  style={{ color: "var(--color-button-text)" }}
                 >
                   Ver projeto <ArrowUpRight size={18} />
                 </a>
@@ -127,7 +135,10 @@ export default function Projects() {
               crescimento desde o início.
             </p>
 
-            <ul className="mt-6 space-y-3 text-white/70">
+            <ul
+              className="mt-6 space-y-3 text-white/70"
+              style={{ color: "var( --color-button-text)" }}
+            >
               <li>• Problema bem definido antes do código</li>
               <li>• Decisões de arquitetura conscientes</li>
               <li>• Pensado para evoluir, não só existir</li>
@@ -148,6 +159,10 @@ export default function Projects() {
             className="w-full h-80 rounded-2xl border border-white/10 
                           bg-gradient-to-br from-white/5 to-purple-500/5 
                           backdrop-blur-xl flex items-center justify-center"
+            style={{
+              border: "1px solid var(--color-border-soft)",
+              boxShadow: "var(--shadow-card)",
+            }}
           >
             <span className="text-white/30 text-sm italic">
               Preview do projeto
@@ -156,7 +171,7 @@ export default function Projects() {
         </div>
 
         {/* Closing */}
-        <div className="mt-32 text-center">
+        <div className="mt-20 text-center">
           <p className="text-white/70 text-lg">
             Se você gostou da forma como eu penso projetos,
             <br />

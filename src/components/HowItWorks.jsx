@@ -56,22 +56,13 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" className="relative py-20 overflow-hidden">
-      {/* Glow */}
+      {/* glow */}
       <div
         ref={glowRef}
         className="absolute inset-0 pointer-events-none transition-opacity duration-300"
       />
 
-      {/* Noise */}
-      <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
-        style={{
-          backgroundImage: "url('/noise.png')",
-          backgroundRepeat: "repeat",
-        }}
-      />
-
-      {/* Content */}
+      {/* content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
@@ -85,7 +76,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        {/* Steps */}
+        {/*steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {steps.map((step, index) => {
             const Icon = step.icon;
@@ -95,6 +86,10 @@ export default function HowItWorks() {
                 className="group relative p-6 rounded-2xl border border-white/10 
                            bg-white/5 backdrop-blur-xl
                            hover:border-purple-400/40 transition"
+                style={{
+                  border: "1px solid var(--color-border-soft)",
+                  boxShadow: "var(--shadow-card)",
+                }}
               >
                 {/* Glow hover */}
                 <div
@@ -111,6 +106,7 @@ export default function HowItWorks() {
                   <div
                     className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl
                                 bg-purple-600/20 text-purple-400"
+                    style={{ color: "var(--color-button-text)" }}
                   >
                     <Icon size={24} />
                   </div>

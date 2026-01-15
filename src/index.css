@@ -40,3 +40,38 @@
   }
 
 
+.hero-light-effects {
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(124, 77, 255, 0.15);
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
+
+
+.form-glass {
+  background: var(--color-form-bg);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-form);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--color-input-border);
+}
+
+.form-glass input,
+.form-glass textarea {
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form-glass input::placeholder,
+.form-glass textarea::placeholder {
+  color: var(--color-text-soft);
+}
+
+

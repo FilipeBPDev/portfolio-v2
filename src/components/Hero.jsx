@@ -77,11 +77,14 @@ export default function Hero() {
           </a>{" "}
         </div>
 
-        {/* Badges de tecnologia com icones */}
+        {/* tecnologia com icones */}
         <div className="mt-16 flex flex-wrap justify-center gap-6 text-sm text-black/70 dark:text-white/70">
           <div
             className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/10"
-            style={{ border: "1px solid var(--color-button-border)" }}
+            style={{
+              border: "1px solid var(--color-button-border)",
+              boxShadow: "var(--shadow-badges)",
+            }}
           >
             <Atom
               size={20}
@@ -100,7 +103,10 @@ export default function Hero() {
           </div>
           <div
             className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/10"
-            style={{ border: "1px solid var(--color-button-border)" }}
+            style={{
+              border: "1px solid var(--color-button-border)",
+              boxShadow: "var(--shadow-badges)",
+            }}
           >
             <Wind
               size={20}
@@ -119,7 +125,10 @@ export default function Hero() {
           </div>
           <div
             className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/10"
-            style={{ border: "1px solid var(--color-button-border)" }}
+            style={{
+              border: "1px solid var(--color-button-border)",
+              boxShadow: "var(--shadow-badges)",
+            }}
           >
             <Code
               size={20}
@@ -138,7 +147,10 @@ export default function Hero() {
           </div>
           <div
             className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/10"
-            style={{ border: "1px solid var(--color-button-border)" }}
+            style={{
+              border: "1px solid var(--color-button-border)",
+              boxShadow: "var(--shadow-badges)",
+            }}
           >
             <Database
               size={20}
@@ -157,7 +169,10 @@ export default function Hero() {
           </div>
           <div
             className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 dark:border-white/10"
-            style={{ border: "1px solid var(--color-button-border)" }}
+            style={{
+              border: "1px solid var(--color-button-border)",
+              boxShadow: "var(--shadow-badges)",
+            }}
           >
             <Palette
               size={20}

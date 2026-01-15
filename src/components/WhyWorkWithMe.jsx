@@ -79,8 +79,13 @@ export default function WhyWorkWithMe() {
 
             <p className="mt-10 text-lg text-white/70">
               Não é só sobre entregar um site bonito. <br />É sobre{" "}
-              <strong className="text-white/90">entender o seu negócio</strong>,
-              pensar junto e transformar ideias em algo que realmente funcione
+              <strong
+                className="text-white/90"
+                style={{ color: "var(--color-button-text)" }}
+              >
+                entender o seu negócio
+              </strong>
+              , pensar junto e transformar ideias em algo que realmente funcione
               no dia a dia.
             </p>
 
@@ -88,7 +93,12 @@ export default function WhyWorkWithMe() {
               Gosto de trabalhar com clareza desde o início. Você participa do
               processo, entende cada decisão e sabe exatamente o que está sendo
               construído —{" "}
-              <span className="text-white/80">sem surpresas no final.</span>
+              <span
+                className="text-white/80"
+                style={{ color: "var(--color-button-text)" }}
+              >
+                sem surpresas no final.
+              </span>
             </p>
 
             <div className="mt-10 w-full flex justify-center">
@@ -119,8 +129,16 @@ export default function WhyWorkWithMe() {
                           : "border border-white/10 bg-white/5 hover:border-purple-400/30"
                       }
                     `}
+                    style={{
+                      border: "1px solid var(--color-border-soft)",
+                      boxShadow: "var(--shadow-card)",
+                    }}
                   >
-                    <Icon size={24} className="text-purple-300 mt-1 shrink-0" />
+                    <Icon
+                      size={24}
+                      className="text-purple-300 mt-1 shrink-0"
+                      style={{ color: "var(--color-button-text)" }}
+                    />
                     <p className="text-white text-base">{item.text}</p>
                   </div>
                 );
@@ -129,13 +147,25 @@ export default function WhyWorkWithMe() {
 
             {/* Placeholder visual area */}
             <div className="flex justify-center">
-              <p className="italic text-white/50 ">
+              <p
+                className="italic text-white/10 text-sm"
+                style={{ color: "var(--color-button-text)" }}
+              >
                 “Prefiro explicar uma decisão do que simplesmente impor uma
                 solução.”
               </p>
             </div>
-            <div className="w-full h-80 md:h-[300px] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-purple-500/5 backdrop-blur-xl flex items-center justify-center">
-              <span className="text-white/30 text-sm italic">
+            <div
+              className="w-full h-80 md:h-[300px] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-purple-500/5 backdrop-blur-xl flex items-center justify-center"
+              style={{
+                border: "1px solid var(--color-border-soft)",
+                boxShadow: "var(--shadow-card)",
+              }}
+            >
+              <span
+                className="text-white/30 text-sm italic"
+                style={{ color: "var(--color-button-text)" }}
+              >
                 Imagem em breve
               </span>
             </div>

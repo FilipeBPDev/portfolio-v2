@@ -1,14 +1,23 @@
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/10">
+    <footer
+      className="relative border-t border-white/10"
+      style={{
+        background: "var(--color-footer-bg)",
+
+        marginBottom: "1rem",
+      }}
+    >
       {/* Glow sutil */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-purple-900/10 to-transparent" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-5">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Identidade */}
           <div>
-            <p className="text-xl font-semibold text-white">Filipe.dev</p>
+            <p className="text-xl font-semibold text-white">
+              Filipe<span className="text-[var(--accent)]">.dev</span>
+            </p>
             <p className="mt-3 text-sm text-white/60 max-w-xs">
               Desenvolvimento web com foco em clareza, processo e resultados
               reais.
@@ -17,8 +26,16 @@ export default function Footer() {
 
           {/* Navegação */}
           <div>
-            <p className="text-sm font-medium text-white mb-4">Navegação</p>
-            <ul className="space-y-3 text-sm text-white/60">
+            <p
+              className="text-sm font-medium text-white mb-4"
+              style={{ color: "var(--color-button-text)" }}
+            >
+              Navegação
+            </p>
+            <ul
+              className="space-y-3 text-sm text-white/60"
+              style={{ color: "var(--color-text-soft)" }}
+            >
               <li>
                 <a href="#home" className="hover:text-white transition">
                   Home
@@ -39,8 +56,16 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <p className="text-sm font-medium text-white mb-4">Contato</p>
-            <ul className="space-y-3 text-sm text-white/60">
+            <p
+              className="text-sm font-medium text-white mb-4"
+              style={{ color: "var(--color-button-text)" }}
+            >
+              Contato
+            </p>
+            <ul
+              className="space-y-3 text-sm text-white/60"
+              style={{ color: "var(--color-text-soft)" }}
+            >
               <li>
                 <a
                   href="mailto:seuemail@email.com"
@@ -72,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Linha final */}
-        <div className="mt-16 pt-8 border-t border-white/10 text-center">
+        <div className="mt-5 pt-8 border-t border-white/10 text-center">
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Filipe.dev — Construído com cuidado e
             atenção aos detalhes.

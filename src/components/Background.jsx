@@ -8,7 +8,7 @@ export default function Background({ theme }) {
         className={`absolute inset-0 transition-colors ${
           theme === "dark"
             ? "bg-gradient-to-br from-purple-950 via-black to-purple-900"
-            : "bg-gradient-to-br from-violet-50 via-purple-100 to-rose-50"
+            : "bg-gradient-to-br from-violet-200 via-purple-100 to-rose-50"
         }`}
       />
 

@@ -59,7 +59,10 @@ export default function Contact() {
               seguir.
             </p>
 
-            <ul className="mt-8 space-y-3 text-white/60 text-sm">
+            <ul
+              className="mt-8 space-y-3 text-white/60 text-sm"
+              style={{ color: "var(--color-text-soft)" }}
+            >
               <li>• Contato direto comigo</li>
               <li>• Sem compromisso inicial</li>
               <li>• Clareza antes de qualquer proposta</li>
@@ -72,6 +75,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition"
+                style={{ color: "var(--color-button-text)" }}
               >
                 Prefere conversar pelo WhatsApp →
               </a>
@@ -80,13 +84,20 @@ export default function Contact() {
 
           {/* Right - Form */}
           <div
-            className="w-full rounded-2xl p-8 md:p-10 
+            className="form-glass w-full rounded-2xl p-8 md:p-10 
                        border border-white/10 
                        bg-white/5 backdrop-blur-xl"
+            style={{
+              border: "1px solid var(--color-border-soft)",
+              boxShadow: "var(--shadow-card)",
+            }}
           >
             <form className="space-y-6">
               <div>
-                <label className="block text-sm text-white/60 mb-2">
+                <label
+                  className="block text-sm text-white/60 mb-2"
+                  style={{ color: "var(--color-button-text)" }}
+                >
                   Seu nome
                 </label>
                 <input
@@ -100,7 +111,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm text-white/60 mb-2">
+                <label
+                  className="block text-sm text-white/60 mb-2"
+                  style={{ color: "var(--color-button-text)" }}
+                >
                   Email
                 </label>
                 <input
@@ -114,7 +128,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm text-white/60 mb-2">
+                <label
+                  className="block text-sm text-white/60 mb-2"
+                  style={{ color: "var(--color-button-text)" }}
+                >
                   Sobre o que vamos conversar?
                 </label>
                 <textarea

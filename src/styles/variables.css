@@ -4,8 +4,10 @@
   /* Light theme base */
   --color-bg: #f6f4fb;        /* fundo claro com leve roxo */
   --color-bg-soft: #ffffff;   /* cards / navbar */
-  --color-text: #2b2340;      /* texto escuro sofisticado */
+  --color-text: #1b152b;      /* texto escuro sofisticado */
   --color-text-soft: #5a5275;
+  --color-button-text: #5b2b9b;
+  --color-button-border: #5b2b9b;
 
   /* Roxo principal (branding) */
   --accent: #7C4DFF;
@@ -27,6 +29,8 @@
   --color-bg-soft: #1f1e33;
   --color-text: #f5f0e8f0;
   --color-text-soft: #b7b3d6;
+  --color-button-text: #c09ce2;
+  --color-button-border: #c09ce2;
 
   --accent: #7C4DFF;
   --accent-light: #9B5CFF;

@@ -60,7 +60,7 @@ export default function Navbar({ theme, toggleTheme }) {
               {isDark ? (
                 <Moon size={14} className="text-purple-700" />
               ) : (
-                <Sun size={14} className="text-purple-400" />
+                <Sun size={15} className="text-purple-400" />
               )}
             </span>
           </button>

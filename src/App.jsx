@@ -5,13 +5,20 @@ import Background from "./components/Background";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [theme, setTheme] = useState("dark"); // simples e local
+  const [theme, setTheme] = useState("dark");
 
   return (
-    <div className={theme}>
+    <div className={theme === "dark" ? "dark" : ""}>
       <Background theme={theme} />
 
-      <div className="relative text-white transition-colors">
+      {/* TEXTO PADRÃO DO SITE */}
+      <div
+        className="
+          relative transition-colors
+          text-zinc-900
+          dark:text-white
+        "
+      >
         <Navbar
           theme={theme}
           toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}

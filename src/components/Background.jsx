@@ -1,3 +1,5 @@
+import noise from "../assets/img/noise.jpg";
+
 export default function Background({ theme }) {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
@@ -6,16 +8,15 @@ export default function Background({ theme }) {
         className={`absolute inset-0 transition-colors ${
           theme === "dark"
             ? "bg-gradient-to-br from-purple-950 via-black to-purple-900"
-            : //"bg-gradient-to-br from-purple-950 via-black to-purple-900"
-              "bg-gradient-to-br from-gray-100 via-white to-gray-200"
+            : "bg-gradient-to-br from-violet-50 via-purple-100 to-rose-50"
         }`}
       />
 
       {/* Noise (funciona para ambos) */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.015] pointer-events-none"
         style={{
-          backgroundImage: "url('/noise.png')",
+          backgroundImage: `url(${noise})`,
           backgroundRepeat: "repeat",
         }}
       />

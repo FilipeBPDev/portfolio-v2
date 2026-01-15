@@ -1,38 +1,42 @@
-@import "./styles/variables.css";
-@import "tailwindcss";
+  @import "./styles/variables.css";
+  @import "tailwindcss";
 
-/* ==========================================
-   Globals (sem @apply)
-========================================== */
+  /* ==========================================
+    Globals (sem @apply)
+  ========================================== */
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* estilos globais simples (não Tailwind utilities) */
-body {
-  background-color: var(--color-bg);
+  /* estilos globais simples (não Tailwind utilities) */
+  body {
+    background-color: var(--color-bg);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* títulos globais */
+  h1, h2, h3, h4 {
+    font-family: var(--font-main);
+    color: var(--color-text);
+  }
+
+  p {
   color: var(--color-text);
-  font-family: var(--font-main);
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* títulos globais */
-h1, h2, h3, h4 {
-  font-family: var(--font-main);
-  color: var(--color-text);
-}
 
-/* links */
-a {
+  /* links */
+  a {
 
-  transition: color 0.2s ease;
-}
+    transition: color 0.2s ease;
+  }
 
-a:hover {
-  color: var(--accent-light);
-}
+  a:hover {
+    color: var(--accent-light);
+  }
 
 

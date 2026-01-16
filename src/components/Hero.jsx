@@ -37,19 +37,21 @@ export default function Hero() {
 
       {/* Conteúdo */}
       <div className="mt-10 relative gap-6 z-10 flex flex-col items-center text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          {" "}
-          <ReactTyped
-            strings={[
-              "Meu nome é Filipe, sou Desenvolvedor Web",
-              "Construo interfaces modernas e escaláveis",
-            ]}
-            typeSpeed={85}
-            backSpeed={60}
-            loop
-          />{" "}
-        </h1>
-        <p className="mt-10 max-w-2xl text-lg md:text-xl opacity-80">
+        <div className="min-h-[9rem] md:min-h-[12rem] max-w-7xl w-full flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold">
+            {" "}
+            <ReactTyped
+              strings={[
+                "Websites profissionais que transmitem confiança desde o primeiro acesso",
+                "Design moderno, código bem estruturado e foco total na experiência",
+              ]}
+              typeSpeed={100}
+              backSpeed={60}
+              loop
+            />{" "}
+          </h1>
+        </div>
+        <p className="mt-6 max-w-2xl text-lg md:text-xl opacity-80">
           Crio interfaces modernas, rápidas e bem estruturadas, focadas em
           performance e conversão.
         </p>

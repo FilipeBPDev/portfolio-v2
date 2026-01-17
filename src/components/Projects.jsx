@@ -28,21 +28,21 @@ export default function Projects() {
       id: "01",
       title: "Crypto Tracker",
       description:
-        "Acompanhar ativos de forma simples, sem depender de dashboards confusos.",
+        "Dados financeiros organizados para leitura rápida e decisões melhores.",
       tags: ["React", "API", "UX"],
     },
     {
       id: "02",
       title: "Portfolio v2",
       description:
-        "Um site pensado para conversão, clareza e posicionamento profissional.",
+        "Estrutura pensada para posicionamento profissional e conversão.",
       tags: ["React", "Design System", "UI"],
     },
     {
       id: "03",
       title: "Sistema de Relatórios",
       description:
-        "Geração dinâmica de relatórios com filtros e foco em usabilidade.",
+        "Relatórios dinâmicos com filtros simples e foco em usabilidade.",
       tags: ["PHP", "SQL", "Back-end"],
     },
   ];
@@ -53,14 +53,17 @@ export default function Projects() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Hero */}
         <div className="flex items-center justify-center">
-          <div className="max-w-3xl text-center gap-12">
+          <div className="max-w-4xl text-center gap-12">
             <h2 className="text-3xl md:text-4xl font-semibold text-white">
-              Projetos desenvolvidos com foco em clareza,
-              <span className="text-purple-400"> estrutura e evolução.</span>
+              Projetos pensados como
+              <span className="text-purple-400">
+                {" "}
+                produtos, não apenas como código.
+              </span>
             </h2>
             <p className="mt-10 mb-16 text-white/70 text-lg">
-              Cada projeto representa decisões reais, aprendizado contínuo e
-              preocupação com o que funciona na prática — não apenas estética.
+              Cada projeto reflete decisões técnicas reais, foco em usabilidade
+              e crescimento a longo prazo.
             </p>
           </div>
         </div>
@@ -116,7 +119,7 @@ export default function Projects() {
                   className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition"
                   style={{ color: "var(--color-button-text)" }}
                 >
-                  Ver projeto <ArrowUpRight size={18} />
+                  Ver detalhes <ArrowUpRight size={18} />
                 </a>
               </div>
             </div>
@@ -127,21 +130,24 @@ export default function Projects() {
         <div className="mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h3 className="text-3xl font-bold text-white">
-              Projeto em destaque
+              Projeto em{" "}
+              <span style={{ color: "var(--color-button-text)" }}>
+                destaque
+              </span>
             </h3>
 
             <p className="mt-6 text-white/70">
-              Este projeto representa bem como eu penso produto, experiência e
-              crescimento desde o início.
+              Este projeto mostra como eu abordo problemas reais desde o
+              entendimento até a estrutura técnica.
             </p>
 
             <ul
               className="mt-6 space-y-3 text-white/70"
               style={{ color: "var( --color-button-text)" }}
             >
-              <li>• Problema bem definido antes do código</li>
-              <li>• Decisões de arquitetura conscientes</li>
-              <li>• Pensado para evoluir, não só existir</li>
+              <li>• Problema definido antes da implementação</li>
+              <li>• Decisões técnicas com propósito</li>
+              <li>• Estrutura preparada para evoluir</li>
             </ul>
 
             <a
@@ -171,11 +177,11 @@ export default function Projects() {
         </div>
 
         {/* Closing */}
-        <div className="mt-20 text-center">
-          <p className="text-white/70 text-lg">
-            Se você gostou da forma como eu penso projetos,
+        <div className="mt-20 text-center ">
+          <p className="text-white/70 ">
+            Se a forma como eu penso soluções faz sentido para você,
             <br />
-            talvez a gente pense parecido.
+            talvez a gente trabalhe bem juntos.
           </p>
 
           <a

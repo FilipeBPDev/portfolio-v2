@@ -31,20 +31,24 @@ export default function WhyWorkWithMe() {
   const highlights = [
     {
       icon: MessageCircle,
-      text: "Comunicação constante, sem caixa preta",
+      title: "Comunicação transparente",
+      text: "Você acompanha o processo e entende cada etapa.",
       featured: true,
     },
     {
       icon: CheckCircle,
-      text: "Decisões explicadas, não impostas",
+      title: "Decisões bem explicadas",
+      text: "Cada escolha é pensada para o seu negócio.",
     },
     {
       icon: TrendingUp,
-      text: "Projetos pensados para crescer",
+      title: "Projetos para escalar",
+      text: "Estrutura preparada para evolução futura.",
     },
     {
       icon: PackageCheck,
-      text: "Entregas alinhadas, sem surpresas",
+      title: "Entregas alinhadas",
+      text: "O combinado é exatamente o que você recebe.",
     },
   ];
 
@@ -73,7 +77,7 @@ export default function WhyWorkWithMe() {
             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
               Por que trabalhar comigo? <br />
               <span className="text-purple-400">
-                Mais que código, é parceria.
+                Clareza, parceria e resultados reais.{" "}
               </span>
             </h2>
 
@@ -85,13 +89,13 @@ export default function WhyWorkWithMe() {
               >
                 entender o seu negócio
               </strong>
-              , pensar junto e transformar ideias em algo que realmente funcione
-              no dia a dia.
+              , seus objetivos e transformar ideias em soluções digitais que
+              fazem sentido no dia a dia.
             </p>
 
             <p className="mt-6 text-white/70">
-              Gosto de trabalhar com clareza desde o início. Você participa do
-              processo, entende cada decisão e sabe exatamente o que está sendo
+              Trabalho com um processo claro e colaborativo. Você acompanha cada
+              etapa, entende as decisões e sabe exatamente o que está sendo
               construído —{" "}
               <span
                 className="text-white/80"
@@ -113,7 +117,7 @@ export default function WhyWorkWithMe() {
             </div>
           </div>
 
-          {/* Right - Highlights + Placeholder */}
+          {/* direita - destaques placeholder */}
           <div className="flex flex-col justify-between h-full w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlights.map((item, i) => {
@@ -122,39 +126,56 @@ export default function WhyWorkWithMe() {
                   <div
                     key={i}
                     className={`
-                      rounded-2xl p-5 backdrop-blur-xl flex items-start gap-4 transition
-                      ${
-                        item.featured
-                          ? "border border-purple-400/40 bg-purple-500/10"
-                          : "border border-white/10 bg-white/5 hover:border-purple-400/30"
-                      }
-                    `}
+          rounded-2xl p-5 backdrop-blur-xl flex items-start gap-4 transition
+          ${
+            item.featured
+              ? "border border-purple-400/40 bg-purple-500/10"
+              : "border border-white/10 bg-white/5 hover:border-purple-400/30"
+          }
+        `}
                     style={{
                       border: "1px solid var(--color-border-soft)",
                       boxShadow: "var(--shadow-card)",
                     }}
                   >
+                    {/* Ícone */}
                     <Icon
                       size={24}
-                      className="text-purple-300 mt-1 shrink-0"
+                      className="mt-1 shrink-0"
                       style={{ color: "var(--color-button-text)" }}
                     />
-                    <p className="text-white text-base">{item.text}</p>
+
+                    {/* Conteúdo */}
+                    <div className="flex flex-col gap-2">
+                      <h3
+                        className="text-base font-semibold leading-tight"
+                        style={{ color: "var(--color-button-text)" }}
+                      >
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className="text-sm leading-relaxed"
+                        style={{ color: "var(--color-text-soft)" }}
+                      >
+                        {item.text}
+                      </p>
+                    </div>
                   </div>
                 );
               })}
             </div>
 
             {/* Placeholder visual area */}
-            <div className="flex justify-center">
+            {/*  <div className="flex justify-center">
               <p
                 className="italic text-white/10 text-sm"
                 style={{ color: "var(--color-button-text)" }}
               >
-                “Prefiro explicar uma decisão do que simplesmente impor uma
-                solução.”
+                “Prefiro alinhar expectativas desde o início do que corrigir
+                problemas no final..”
               </p>
-            </div>
+            </div> */}
             <div
               className="w-full h-80 md:h-[300px] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-purple-500/5 backdrop-blur-xl flex items-center justify-center"
               style={{

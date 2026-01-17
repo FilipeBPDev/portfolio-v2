@@ -45,18 +45,17 @@ export default function Contact() {
           {/* Left - Copy */}
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight">
-              Vamos tirar sua ideia do papel?
+              Vamos conversar sobre sua ideia?
             </h2>
 
             <p className="mt-8 text-lg text-white/70">
-              Se você chegou até aqui, provavelmente já percebeu que eu não
-              construo projetos no escuro.
+              Se você chegou até aqui, provavelmente valoriza clareza e quer
+              entender bem antes de decidir.
             </p>
 
             <p className="mt-4 text-white/70">
-              A conversa começa simples: você me conta o que precisa, eu te
-              ajudo a organizar, entender caminhos e decidir se faz sentido
-              seguir.
+              A conversa é simples: você explica o contexto, eu ajudo a
+              organizar as ideias e avaliar os caminhos possíveis.
             </p>
 
             <ul
@@ -64,7 +63,7 @@ export default function Contact() {
               style={{ color: "var(--color-text-soft)" }}
             >
               <li>• Contato direto comigo</li>
-              <li>• Sem compromisso inicial</li>
+              <li>• Conversa sem compromisso</li>
               <li>• Clareza antes de qualquer proposta</li>
             </ul>
 
@@ -77,7 +76,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition"
                 style={{ color: "var(--color-button-text)" }}
               >
-                Prefere conversar pelo WhatsApp →
+                Prefere conversar pelo WhatsApp? →
               </a>
             </div>
           </div>
@@ -119,7 +118,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
-                  placeholder="Para eu te responder"
+                  placeholder="Para manter contato"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
                              text-white placeholder-white/30 
@@ -132,11 +131,11 @@ export default function Contact() {
                   className="block text-sm text-white/60 mb-2"
                   style={{ color: "var(--color-button-text)" }}
                 >
-                  Sobre o que vamos conversar?
+                  Conte um pouco sobre o que você precisa
                 </label>
                 <textarea
                   rows="4"
-                  placeholder="Conte brevemente sua ideia, problema ou projeto"
+                  placeholder="Conte um pouco sobre o que você precisa"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
                              text-white placeholder-white/30 

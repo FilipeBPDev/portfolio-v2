@@ -45,15 +45,17 @@ export default function Hero() {
                 "Websites profissionais que transmitem confiança desde o primeiro acesso",
                 "Design moderno, código bem estruturado e foco total na experiência",
               ]}
-              typeSpeed={100}
+              typeSpeed={120}
               backSpeed={60}
               loop
             />{" "}
           </h1>
         </div>
-        <p className="mt-6 max-w-2xl text-lg md:text-xl opacity-80">
-          Crio interfaces modernas, rápidas e bem estruturadas, focadas em
-          performance e conversão.
+        <p className="mt-6 max-w-5xl text-lg md:text-xl opacity-80">
+          Sou desenvolvedor web, formado em Análise e Desenvolvimento de
+          Sistemas. Crio sites que fortalecem a credibilidade da marca e
+          transformam ideias em experiências digitais rápidas e bem
+          estruturadas.
         </p>
 
         {/* CTAs */}
@@ -64,7 +66,7 @@ export default function Hero() {
             className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 transition text-white font-medium"
           >
             {" "}
-            Ver projetos{" "}
+            Ver projetos reais{" "}
           </a>{" "}
           <a
             href="#contact"
@@ -75,7 +77,7 @@ export default function Hero() {
             }}
           >
             {" "}
-            Fale comigo{" "}
+            Vamos conversar{" "}
           </a>{" "}
         </div>
 
@@ -144,7 +146,7 @@ export default function Hero() {
                 color: "var(--color-button-text)",
               }}
             >
-              PHP
+              PHP (Backend)
             </span>
           </div>
           <div
@@ -166,7 +168,7 @@ export default function Hero() {
                 color: "var(--color-button-text)",
               }}
             >
-              MySQL
+              Banco de Dados
             </span>
           </div>
           <div

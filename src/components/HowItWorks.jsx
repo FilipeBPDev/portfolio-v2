@@ -30,26 +30,26 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: Lightbulb,
-      title: "Entendimento & briefing",
-      desc: "Alinhamos objetivos, expectativas e referências antes de qualquer decisão. Nada é feito sem clareza.",
+      title: "Alinhamento inicial",
+      desc: "Alinhamos expectativas e necessidades antes de qualquer decisão. Tudo começa com clareza e direção.",
       image: briefingImg, // sugestão: reunião ou brainstorming
     },
     {
       icon: Palette,
-      title: "Alinhamento visual",
-      desc: "Apresento a direção visual inicial para validação, garantindo que o projeto siga o que você imaginou.",
+      title: "Direção visual validada",
+      desc: "Definimos a proposta visual inicial antes de avançar, garantindo alinhamento desde o começo.",
       image: visualImg, // sugestão: wireframe ou tela de design
     },
     {
       icon: Code2,
       title: "Desenvolvimento",
-      desc: "Você acompanha a evolução do projeto com checkpoints e feedback contínuo, evitando retrabalho.",
+      desc: "O projeto evolui com organização e checkpoints, permitindo ajustes contínuos e evitando surpresas no final.",
       image: devImg, // sugestão: tela de código ou dev trabalhando
     },
     {
       icon: Rocket,
-      title: "Entrega validada",
-      desc: "Entrega final após ajustes, com tudo revisado, testado e alinhado ao que foi combinado.",
+      title: "Entrega final e revisão",
+      desc: "Após os ajustes finais, entrego o projeto revisado, testado e alinhado ao que foi combinado.",
       image: deliveryImg, // sugestão: mockup final ou cliente feliz
     },
   ];
@@ -67,12 +67,13 @@ export default function HowItWorks() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-purple-400">
-            Metodologia de Desenvolvimento
+            Como funciona o processo do seu projeto{" "}
           </h2>
-          <p className="mt-6 text-white/70 max-w-2xl mx-auto">
-            Do briefing inicial à entrega final, sigo um processo colaborativo
-            com mini checkpoints e entregas contínuas. Esse fluxo inspirado no
-            método ágil garante clareza, alinhamento e resultados consistentes.
+          <p className="mt-10 text-white/70 max-w-4xl mx-auto">
+            Do primeiro contato à entrega final, sigo um processo claro e
+            colaborativo, com validações em cada etapa. Assim, você acompanha a
+            evolução do projeto, evita surpresas e tem total segurança sobre o
+            resultado final.
           </p>
         </div>
 

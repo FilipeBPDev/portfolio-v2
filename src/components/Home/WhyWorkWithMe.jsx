@@ -165,17 +165,6 @@ export default function WhyWorkWithMe() {
                 );
               })}
             </div>
-
-            {/* Placeholder visual area */}
-            {/*  <div className="flex justify-center">
-              <p
-                className="italic text-white/10 text-sm"
-                style={{ color: "var(--color-button-text)" }}
-              >
-                “Prefiro alinhar expectativas desde o início do que corrigir
-                problemas no final..”
-              </p>
-            </div> */}
             <div
               className="w-full h-80 md:h-[300px] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-purple-500/5 backdrop-blur-xl flex items-center justify-center"
               style={{

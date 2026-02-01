@@ -9,11 +9,13 @@
   --color-button-text: #5b2b9b;
   --color-button-border: #5b2b9b;
   --color-border-soft: rgba(124, 77, 255, 0.25);
-  --shadow-card: 0 12px 24px rgba(124, 77, 255, 0.15);
   --shadow-badges: 0 12px 24px rgba(124, 77, 255, 0.20);
   --color-card-bg: rgba(255, 255, 255, 0.15); /* fundo translúcido para efeito glass */
   --color-card-border: rgba(124, 77, 255, 0.25); /* borda roxa suave */
-  --shadow-card: 0 12px 24px rgba(124, 77, 255, 0.15); /* sombra leve para flutuação */
+  --shadow-card: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.08);
+
 
 
   --color-form-bg: rgba(255, 255, 255, 0.15); /* fundo translúcido */
@@ -59,11 +61,13 @@
   --color-button-text: #c09ce2;
   --color-button-border: #c09ce2;
   --color-border-soft: rgba(255, 255, 255, 0.1);
-  --shadow-card: 0 6px 12px rgba(0, 0, 0, 0.4);
+  --shadow-card:
+    0 25px 60px rgba(0, 0, 0, 0.385),
+    0 10px 25px rgba(0, 0, 0, 0.351);
+
   --shadow-badges: 0 4px 10px rgba(0, 0, 0, 0.4);
   --color-card-bg: rgba(255, 255, 255, 0.05);
   --color-card-border: rgba(255, 255, 255, 0.1);
-  --shadow-card: none;
   --color-form-bg: rgba(255, 255, 255, 0.05);
   --color-input-bg: rgba(255, 255, 255, 0.08);
   --color-input-border: rgba(255, 255, 255, 0.1);

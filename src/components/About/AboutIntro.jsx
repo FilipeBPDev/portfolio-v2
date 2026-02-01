@@ -54,7 +54,7 @@ export default function AboutIntro() {
   }, []);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-28 overflow-hidden">
       <div
         ref={glowRef}
         className="absolute inset-0 pointer-events-none transition-opacity duration-300"
@@ -70,7 +70,7 @@ export default function AboutIntro() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="max-w-3xl mb-10">
+        <div className="max-w-3xl mb-6">
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
             Filipe Batista
           </h1>
@@ -157,7 +157,7 @@ export default function AboutIntro() {
 
             {/* Principles */}
             <div className="mt-8">
-              <div className="relative flex items-center gap-32 mb-10">
+              <div className="relative flex items-center gap-42 mb-10">
                 <h2 className="text-xl ml-8 font-semibold opacity-90">
                   Como eu penso e construo produtos
                 </h2>
@@ -197,7 +197,7 @@ export default function AboutIntro() {
                         z-20
                         animate-fade-in"
                       style={{
-                        background: "var(--color-card-bg)",
+                        background: "var(--color-bg-soft)",
                         color: "var(--color-text)",
                         border: "1px solid var(--color-border-soft)",
                         boxShadow: "var(--shadow-card)",

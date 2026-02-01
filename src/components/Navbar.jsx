@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ theme, toggleTheme }) {
   const [open, setOpen] = useState(false);
@@ -30,14 +31,12 @@ export default function Navbar({ theme, toggleTheme }) {
         <div className="flex items-center gap-8">
           <ul className="hidden md:flex gap-8 text-sm opacity-80">
             <li>
-              <a href="#home" className="hover:opacity-100">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#sobre" className="hover:opacity-100">
+              <Link to="/sobre" className="hover:opacity-100">
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#projetos" className="hover:opacity-100">

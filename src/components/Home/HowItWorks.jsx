@@ -1,7 +1,7 @@
-import briefingImg from "../assets/img/img1.jpg";
-import visualImg from "../assets/img/img2.jpg";
-import devImg from "../assets/img/img3.jpg";
-import deliveryImg from "../assets/img/img4.jpg";
+import briefingImg from "../../assets/img/img1.jpg";
+import visualImg from "../../assets/img/img2.jpg";
+import devImg from "../../assets/img/img3.jpg";
+import deliveryImg from "../../assets/img/img4.jpg";
 import { useEffect, useRef } from "react";
 import { Lightbulb, Palette, Code2, Rocket } from "lucide-react";
 

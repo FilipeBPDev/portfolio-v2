@@ -1,32 +1,34 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Background from "./components/Background";
+import About from "./pages/About";
 import Footer from "./components/Footer";
+import Background from "./components/Background";
+import { useState } from "react";
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
 
   return (
-    <div className={theme === "dark" ? "dark" : ""}>
-      <Background theme={theme} />
+    <BrowserRouter>
+      <div className={theme === "dark" ? "dark" : ""}>
+        <Background theme={theme} />
 
-      {/* TEXTO PADRÃO DO SITE */}
-      <div
-        className="
-          relative transition-colors
-          text-zinc-900
-          dark:text-white
-        "
-      >
-        <Navbar
-          theme={theme}
-          toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}
-        />
+        <div className="relative transition-colors text-zinc-900 dark:text-white">
+          <Navbar
+            theme={theme}
+            toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}
+          />
 
-        <Home />
-        <Footer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<About />} />
+          </Routes>
+
+          <Footer />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }

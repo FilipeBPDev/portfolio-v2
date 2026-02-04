@@ -69,7 +69,7 @@ export default function AboutIntro() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Header */}
+        {/* header */}
         <div className="max-w-3xl mb-6">
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
             Filipe Batista
@@ -81,7 +81,7 @@ export default function AboutIntro() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-          {/* Profile Card */}
+          {/* card foto */}
           <div
             className="rounded-2xl p-6 backdrop-blur-xl bg-white/5"
             style={{
@@ -115,9 +115,8 @@ export default function AboutIntro() {
             </div>
           </div>
 
-          {/* Content */}
+          {/* content */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            {/* Focus Areas */}
             <div className="flex gap-3 flex-wrap">
               {Object.keys(focusAreas).map((key) => (
                 <button
@@ -155,14 +154,14 @@ export default function AboutIntro() {
               </p>
             </div>
 
-            {/* Principles */}
+            {/* principios */}
             <div className="mt-8">
               <div className="relative flex items-center gap-42 mb-10">
                 <h2 className="text-xl ml-8 font-semibold opacity-90">
                   Como eu penso e construo produtos
                 </h2>
 
-                {/* Tooltip Wrapper */}
+                {/* tooltip */}
                 <div
                   className="relative"
                   onMouseLeave={() => setShowPrinciplesInfo(false)}
@@ -200,7 +199,6 @@ export default function AboutIntro() {
                         background: "var(--color-bg-soft)",
                         color: "var(--color-text)",
                         border: "1px solid var(--color-border-soft)",
-                        boxShadow: "var(--shadow-card)",
                       }}
                     >
                       <p

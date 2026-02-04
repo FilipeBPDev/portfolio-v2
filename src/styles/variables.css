@@ -16,7 +16,7 @@
     0 20px 40px rgba(0, 0, 0, 0.15),
     0 8px 16px rgba(0, 0, 0, 0.08);
 
-
+  --color-text-purple: #5b2b9b;
 
   --color-form-bg: rgba(255, 255, 255, 0.15); /* fundo translúcido */
   --color-input-bg: rgba(255, 255, 255, 0.25); /* campos com leve preenchimento */
@@ -64,7 +64,7 @@
   --shadow-card:
     0 25px 60px rgba(0, 0, 0, 0.385),
     0 10px 25px rgba(0, 0, 0, 0.351);
-
+  --color-text-purple:#cdcdcd;
   --shadow-badges: 0 4px 10px rgba(0, 0, 0, 0.4);
   --color-card-bg: rgba(255, 255, 255, 0.05);
   --color-card-border: rgba(255, 255, 255, 0.1);

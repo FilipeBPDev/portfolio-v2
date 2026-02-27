@@ -156,7 +156,7 @@ export default function AboutIntro() {
 
             {/* principios */}
             <div className="mt-8">
-              <div className="relative flex items-center gap-42 mb-10">
+              <div className="relative flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-10">
                 <h2 className="text-xl ml-8 font-semibold opacity-90">
                   Como eu penso e construo produtos
                 </h2>

@@ -80,51 +80,69 @@ export default function Navbar({ theme, toggleTheme }) {
       {/* MENU MOBILE */}
       {open && (
         <div className="md:hidden mt-4 mx-auto max-w-5xl rounded-2xl backdrop-blur-md border shadow-lg transition-colors dark:bg-black/60 dark:border-white/20 light:bg-white/80 light:border-black/10">
-          <ul className="flex flex-col divide-y divide-black/10">
-            {["home", "sobre", "projetos"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item}`}
-                  onClick={() => setOpen(false)}
-                  className="block px-6 py-4 opacity-80 hover:opacity-100"
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
-              </li>
-            ))}
+          <ul className="flex flex-col divide-y divide-black/10 dark:divide-white/10">
+            <li>
+              <Link
+                to="/"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 opacity-80 hover:opacity-100 transition"
+              >
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/sobre"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 opacity-80 hover:opacity-100 transition"
+              >
+                Sobre
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/projetos"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 opacity-80 hover:opacity-100 transition"
+              >
+                Projetos
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/contato"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-4 opacity-80 hover:opacity-100 transition"
+              >
+                Contato
+              </Link>
+            </li>
 
             {/* INTERRUPTOR TEMA MOBILE */}
             <li className="px-6 py-4 flex justify-between items-center">
-              <span className="text-sm">Tema</span>
+              <span className="text-base opacity-80">Tema</span>
               <button
                 onClick={toggleTheme}
                 className="relative w-12 h-6 flex items-center rounded-full bg-white/10"
               >
                 <span
                   className={`
-                    absolute top-0.5 left-0.5 w-5 h-5
-                    rounded-full bg-white shadow flex items-center justify-center
-                    transform transition-transform duration-300
-                    ${isDark ? "translate-x-6" : "translate-x-0"}
-                  `}
+              absolute top-0.5 left-0.5 w-5 h-5
+              rounded-full bg-white shadow flex items-center justify-center
+              transform transition-transform duration-300
+              ${isDark ? "translate-x-6" : "translate-x-0"}
+            `}
                 >
                   {isDark ? (
                     <Moon size={14} className="text-blue-500" />
                   ) : (
-                    <Sun size={14} className="text-yellow-100" />
+                    <Sun size={14} className="text-yellow-400" />
                   )}
                 </span>
               </button>
-            </li>
-
-            <li className="px-6 py-4">
-              <a
-                href="#contato"
-                onClick={() => setOpen(false)}
-                className="block w-full text-center rounded-lg bg-white/10 py-2"
-              >
-                Fale comigo
-              </a>
             </li>
           </ul>
         </div>

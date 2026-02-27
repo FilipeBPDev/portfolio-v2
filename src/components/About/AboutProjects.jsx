@@ -135,7 +135,6 @@ export default function AboutProjects() {
               scrollbar-none
               px-[10vw]
               py-[02vw]
-              
             "
             >
               {/* spacer left */}

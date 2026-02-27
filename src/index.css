@@ -74,4 +74,11 @@
   color: var(--color-text-soft);
 }
 
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none;    /* Firefox */
+}
 
+.scrollbar-none::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari */
+}

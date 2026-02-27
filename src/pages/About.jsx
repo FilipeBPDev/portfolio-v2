@@ -1,7 +1,7 @@
 import AboutIntro from "../components/About/AboutIntro";
 import AboutProfile from "../components/About/AboutProfile";
 import DevMindset from "../components/About/DevMindset";
-//import SkillsProof from "../components/About/SkillsProof";
+import AboutProjects from "../components/About/AboutProjects";
 //import DirectionCTA from "../components/About/DirectionCTA";
 
 export default function About() {
@@ -10,6 +10,7 @@ export default function About() {
       <AboutIntro />
       <AboutProfile />
       <DevMindset />
+      <AboutProjects />
     </main>
   );
 }

@@ -28,7 +28,7 @@
   --shadow-footer: 0 12px 24px rgba(124, 77, 255, 0.15); /* sombra leve */
 
   --color-navbar-bg: rgba(0, 0, 0, 0.6);
-
+  --color-fade-edge: rgba(255, 255, 255, 0.295);
 
 
 
@@ -72,13 +72,12 @@
   --color-input-bg: rgba(255, 255, 255, 0.08);
   --color-input-border: rgba(255, 255, 255, 0.1);
 
-
   --color-footer-bg: rgba(255, 255, 255, 0.05);
   --color-footer-border: rgba(255, 255, 255, 0.1);
   --shadow-footer: none;
 
   --color-navbar-bg: rgba(0, 0, 0, 0.2);
-  
+  --color-fade-edge: rgba(11, 6, 20, 0.85); /* dark */
 
   --accent: #7C4DFF;
   --accent-light: #9B5CFF;

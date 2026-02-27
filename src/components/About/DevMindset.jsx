@@ -117,6 +117,11 @@ export default function DevMindset() {
                     transition-all duration-300
                     hover:border-purple-400/40 hover:bg-white/10
                   "
+                  style={{
+                    border: "1px solid var(--color-border-soft)",
+                    boxShadow:
+                      "0 20px 40px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.05)",
+                  }}
                 >
                   <div className="flex items-center gap-4">
                     <note.icon className="text-purple-400" size={18} />
@@ -129,6 +134,7 @@ export default function DevMindset() {
                       ml-auto text-white/60 transition-transform duration-300
                       ${isOpen ? "rotate-180 text-purple-400" : ""}
                     `}
+                      style={{ color: "var(--accent)" }}
                     />
                   </div>
 
@@ -139,6 +145,7 @@ export default function DevMindset() {
                       transition-all duration-300
                       ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
                     `}
+                    style={{ color: "var(--color-text-soft)" }}
                   >
                     {note.description}
                   </div>
@@ -170,14 +177,17 @@ export default function DevMindset() {
             }}
           >
             <h3 className="mb-8 text-2xl font-medium text-white">
-              Soft skills aplicadas no dia a dia
+              Soft Skills aplicadas
             </h3>
 
             <ul className="space-y-10 text-sm leading-relaxed text-white/70">
               <li className="flex gap-5 items-start">
                 <MessageCircle size={20} className="text-purple-400 mt-1" />
                 <div>
-                  <strong className="text-white/90">
+                  <strong
+                    className="text-white/90"
+                    style={{ color: "var(--color-text-purple)" }}
+                  >
                     Comunicação técnica clara
                   </strong>
                   <p className="mt-2">
@@ -191,7 +201,10 @@ export default function DevMindset() {
               <li className="flex gap-5 items-start">
                 <Home size={20} className="text-purple-400 mt-1" />
                 <div>
-                  <strong className="text-white/90">
+                  <strong
+                    className="text-white/90"
+                    style={{ color: "var(--color-text-purple)" }}
+                  >
                     Autonomia em ambientes remotos
                   </strong>
                   <p className="mt-2">
@@ -205,7 +218,10 @@ export default function DevMindset() {
               <li className="flex gap-5 items-start">
                 <ClipboardList size={20} className="text-purple-400 mt-1" />
                 <div>
-                  <strong className="text-white/90">
+                  <strong
+                    className="text-white/90"
+                    style={{ color: "var(--color-text-purple)" }}
+                  >
                     Organização e processos
                   </strong>
                   <p className="mt-2">
@@ -219,7 +235,10 @@ export default function DevMindset() {
               <li className="flex gap-5 items-start">
                 <Users size={20} className="text-purple-400 mt-1" />
                 <div>
-                  <strong className="text-white/90">
+                  <strong
+                    className="text-white/90"
+                    style={{ color: "var(--color-text-purple)" }}
+                  >
                     Colaboração e visão coletiva
                   </strong>
                   <p className="mt-2">

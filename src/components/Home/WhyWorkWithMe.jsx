@@ -5,6 +5,7 @@ import {
   TrendingUp,
   PackageCheck,
 } from "lucide-react";
+import Foto from "../../assets/img/img-profile/foto.png";
 
 export default function WhyWorkWithMe() {
   const glowRef = useRef(null);
@@ -126,13 +127,13 @@ export default function WhyWorkWithMe() {
                   <div
                     key={i}
                     className={`
-          rounded-2xl p-5 backdrop-blur-xl flex items-start gap-4 transition
-          ${
-            item.featured
-              ? "border border-purple-400/40 bg-purple-500/10"
-              : "border border-white/10 bg-white/5 hover:border-purple-400/30"
-          }
-        `}
+                      rounded-2xl p-5 backdrop-blur-xl flex items-start gap-4 transition
+                      ${
+                        item.featured
+                          ? "border border-purple-400/40 bg-purple-500/10"
+                          : "border border-white/10 bg-white/5 hover:border-purple-400/30"
+                      }
+                    `}
                     style={{
                       border: "1px solid var(--color-border-soft)",
                       boxShadow: "var(--shadow-card)",
@@ -166,18 +167,19 @@ export default function WhyWorkWithMe() {
               })}
             </div>
             <div
-              className="w-full h-80 md:h-[300px] rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-purple-500/5 backdrop-blur-xl flex items-center justify-center"
+              className="w-full h-80 md:h-[300px] mt-8 rounded-2xl border border-white/10 
+              bg-gradient-to-br from-white/5 to-purple-500/5 
+              backdrop-blur-xl overflow-hidden"
               style={{
                 border: "1px solid var(--color-border-soft)",
                 boxShadow: "var(--shadow-card)",
               }}
             >
-              <span
-                className="text-white/30 text-sm italic"
-                style={{ color: "var(--color-button-text)" }}
-              >
-                Imagem em breve
-              </span>
+              <img
+                src={Foto}
+                alt="Foto de Filipe Batista"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

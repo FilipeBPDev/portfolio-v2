@@ -13,12 +13,6 @@ export default function Home() {
       <WhyWorkWithMe />
       <Projects />
       <Contact />
-
-      {/* Projetos em destaque */}
-      {/* <ProjectsPreview /> */}
-
-      {/* CTA Final */}
-      {/* <CTA /> */}
     </main>
   );
 }

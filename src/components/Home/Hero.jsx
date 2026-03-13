@@ -37,7 +37,7 @@ export default function Hero() {
 
       {/* Conteúdo */}
       <div className="mt-10 relative gap-6 z-10 flex flex-col items-center text-center px-6">
-        <div className="min-h-[9rem] md:min-h-[12rem] max-w-7xl w-full flex items-center justify-center">
+        <div className="h-[20rem] md:min-h-[12rem] max-w-7xl w-full flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold">
             {" "}
             <ReactTyped
@@ -51,7 +51,7 @@ export default function Hero() {
             />{" "}
           </h1>
         </div>
-        <p className="mt-6 max-w-5xl text-lg md:text-xl opacity-80">
+        <p className="max-w-5xl text-lg md:text-xl opacity-80">
           Sou desenvolvedor web, formado em Análise e Desenvolvimento de
           Sistemas. Crio sites que fortalecem a credibilidade da marca e
           transformam ideias em experiências digitais rápidas e bem
@@ -69,7 +69,8 @@ export default function Hero() {
             Ver projetos reais{" "}
           </a>{" "}
           <a
-            href="#contact"
+            href="https://wa.me/5511949155219"
+            target="_blank"
             className="px-6 py-3 rounded-xl border border-purple-300 hover:bg-purple-300/10 transition"
             style={{
               color: "var(--color-button-text)",
@@ -194,16 +195,16 @@ export default function Hero() {
             </span>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 text-black/40 dark:text-white/40 text-sm animate-bounce"
-        style={{
-          color: "var(--color-button-text)",
-        }}
-      >
-        Role para ver mais ↓
+        {/* Scroll indicator */}
+        <div
+          className=" text-black/40 dark:text-white/40 text-sm animate-bounce"
+          style={{
+            color: "var(--color-button-text)",
+          }}
+        >
+          Role para ver mais ↓
+        </div>
       </div>
     </section>
   );

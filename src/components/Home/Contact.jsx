@@ -23,7 +23,10 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-20 overflow-hidden scroll-mt-24"
+    >
       {/* Glow */}
       <div
         ref={glowRef}

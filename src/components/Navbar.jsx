@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Navbar({ theme, toggleTheme }) {
+  const navRef = useRef(null);
   const [open, setOpen] = useState(false);
   const isDark = theme === "dark";
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full px-6">
+    <nav
+      ref={navRef}
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full px-6"
+    >
       {/* NAVBAR PRINCIPAL */}
       <div
         className="mx-auto max-w-5xl flex items-center justify-between px-6 py-2.5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/20 shadow-xl shadow-black/40 transition-colors dark:bg-black/20 dark:border-white/20 light:bg-white/80 light:border-black/10"

@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
+import Foto from "../../assets/img/cryptotracker.jpeg";
+import LogoCrypto from "../../assets/img/projects-logo/logo.png";
+import LogoFin from "../../assets/img/projects-logo/Logo-FinManager.png";
 
 export default function Projects() {
   const glowRef = useRef(null);
@@ -25,30 +28,27 @@ export default function Projects() {
 
   const projects = [
     {
+      logo: LogoCrypto,
       id: "01",
       title: "Crypto Tracker",
       description:
-        "Dados financeiros organizados para leitura rápida e decisões melhores.",
+        "Dashboard para acompanhar preços em tempo real do mercado de criptomoedas.",
       tags: ["React", "API", "UX"],
+      link: "https://cryptotracker.devfilipe.com/",
     },
     {
+      logo: LogoFin,
       id: "02",
-      title: "Portfolio v2",
+      title: "FinManager",
       description:
-        "Estrutura pensada para posicionamento profissional e conversão.",
+        "Sistema de controle financeiro pessoal que permite gerenciar suas finanças de forma simples e eficiente.",
       tags: ["React", "Design System", "UI"],
-    },
-    {
-      id: "03",
-      title: "Sistema de Relatórios",
-      description:
-        "Relatórios dinâmicos com filtros simples e foco em usabilidade.",
-      tags: ["PHP", "SQL", "Back-end"],
+      link: "https://github.com/orgs/Financial-Manage/repositories",
     },
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section id="projects" className="relative py-20 overflow-hidden">
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Hero */}
@@ -85,8 +85,12 @@ export default function Projects() {
               }}
             >
               {/* Index */}
-              <div className="text-4xl font-bold text-purple-400 shrink-0">
-                {project.id}
+              <div className="shrink-0">
+                <img
+                  src={project.logo}
+                  alt={project.title}
+                  className="w-30 h-30 object-contain"
+                />
               </div>
 
               {/* Content */}
@@ -115,7 +119,9 @@ export default function Projects() {
               {/* CTA */}
               <div className="self-start md:self-center">
                 <a
-                  href="#"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-purple-300 hover:text-purple-200 transition"
                   style={{ color: "var(--color-button-text)" }}
                 >
@@ -163,35 +169,19 @@ export default function Projects() {
           {/* Placeholder visual */}
           <div
             className="w-full h-80 rounded-2xl border border-white/10 
-                          bg-gradient-to-br from-white/5 to-purple-500/5 
-                          backdrop-blur-xl flex items-center justify-center"
+             bg-gradient-to-br from-white/5 to-purple-500/5 
+             backdrop-blur-xl overflow-hidden"
             style={{
               border: "1px solid var(--color-border-soft)",
               boxShadow: "var(--shadow-card)",
             }}
           >
-            <span className="text-white/30 text-sm italic">
-              Preview do projeto
-            </span>
+            <img
+              src={Foto}
+              alt="Preview do projeto"
+              className="w-full h-full object-cover"
+            />
           </div>
-        </div>
-
-        {/* Closing */}
-        <div className="mt-20 text-center ">
-          <p className="text-white/70 ">
-            Se a forma como eu penso soluções faz sentido para você,
-            <br />
-            talvez a gente trabalhe bem juntos.
-          </p>
-
-          <a
-            href="#contact"
-            className="inline-block mt-8 px-8 py-3 rounded-xl 
-                       bg-purple-600 hover:bg-purple-700 transition 
-                       text-white font-medium"
-          >
-            Vamos conversar
-          </a>
         </div>
       </div>
     </section>

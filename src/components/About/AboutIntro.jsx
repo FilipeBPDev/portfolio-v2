@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Foto from "../../assets/img/img-profile/foto-perfil.jpeg";
 
 const focusAreas = {
   frontend: {
@@ -91,7 +92,7 @@ export default function AboutIntro() {
           >
             <div
               className="w-full rounded-xl bg-gradient-to-br from-white/5 to-purple-500/10 
-                         flex items-center justify-center overflow-hidden"
+               flex items-center justify-center overflow-hidden"
               style={{
                 aspectRatio: "3 / 4",
                 maxHeight: "400px",
@@ -99,22 +100,20 @@ export default function AboutIntro() {
                 border: "1px solid var(--color-border-soft)",
               }}
             >
-              <span
-                className="text-sm italic"
-                style={{ color: "var(--color-text-soft)" }}
-              >
-                Foto profissional
-              </span>
+              <img
+                src={Foto}
+                alt="Foto de Filipe Batista"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
-
             <div
               className="mt-4 text-sm opacity-70"
               style={{ color: "var(--color-text-soft)" }}
             >
-              São Paulo, Brasil · Remoto
+              {" "}
+              São Paulo, Brasil · Remoto{" "}
             </div>
           </div>
-
           {/* content */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div className="flex gap-3 flex-wrap">

@@ -35,13 +35,6 @@ const ENGINEERING_NOTES = [
     description:
       "Prefiro melhorias graduais e consistentes, reduzindo riscos em produção e mantendo estabilidade durante a evolução do sistema.",
   },
-  {
-    id: "legibilidade",
-    icon: FileCode,
-    title: "Código previsível e legível",
-    description:
-      "Escrevo código pensando em quem irá ler, debugar e evoluir no futuro, facilitando colaboração e continuidade.",
-  },
 ];
 
 export default function DevMindset() {
@@ -76,28 +69,25 @@ export default function DevMindset() {
             </h2>
 
             <p className="text-white/70 leading-relaxed">
-              Minha forma de atuar como desenvolvedor foi construída a partir de
-              experiências reais com sistemas em produção, código legado e
-              ambientes onde decisões técnicas têm impacto direto no negócio e
-              na rotina do time. Antes de pensar em soluções, procuro entender o
-              contexto completo: regras de negócio, histórico do sistema,
-              limitações técnicas, expectativas de quem usa e, principalmente,
-              quem irá manter aquele código no futuro.
+              Minha jornada foi construída a partir de experiências reais com
+              sistemas em produção, código legado e ambientes onde decisões
+              técnicas têm impacto direto no negócio e na rotina do time. Sempre
+              procuro entender o contexto completo: regras de negócio, histórico
+              do sistema, limitações técnicas, expectativas de quem usa e,
+              principalmente, quem irá manter aquele código no futuro.
               <br />
               <br />
-              No dia a dia, tomo decisões considerando arquitetura, legibilidade
-              e manutenibilidade como fatores centrais. Prefiro estruturas
-              claras, com baixo acoplamento e responsabilidades bem definidas,
-              mesmo que isso signifique abrir mão de abordagens mais
-              sofisticadas quando elas não trazem ganho prático. Para mim,
-              código não é apenas execução de lógica, mas uma forma de
-              comunicação entre pessoas ao longo do tempo.
+              Tomo decisões considerando arquitetura, legibilidade e
+              manutenibilidade como fatores centrais. Prefiro estruturas claras,
+              com responsabilidades bem definidas, mesmo que isso signifique
+              abrir mão de abordagens mais sofisticadas quando elas não trazem
+              ganho prático.
               <br />
               <br />
               Valorizo evolução incremental, mudanças seguras e soluções que
-              respeitam o sistema existente. Em vez de reescrever por
-              reescrever, busco melhorar pontos críticos, reduzir complexidade
-              desnecessária e tornar o sistema mais previsível a cada iteração.
+              respeitam o sistema existente. Busco melhorar pontos críticos,
+              reduzir complexidade desnecessária e tornar o sistema mais
+              previsível a cada iteração.
             </p>
           </div>
 
@@ -182,7 +172,7 @@ export default function DevMindset() {
 
             <ul className="space-y-10 text-sm leading-relaxed text-white/70">
               <li className="flex gap-5 items-start">
-                <MessageCircle size={20} className="text-purple-400 mt-1" />
+                <MessageCircle className="text-purple-400 mt-1 shrink-0" />
                 <div>
                   <strong
                     className="text-white/90"
@@ -199,7 +189,7 @@ export default function DevMindset() {
               </li>
 
               <li className="flex gap-5 items-start">
-                <Home size={20} className="text-purple-400 mt-1" />
+                <Home size={20} className="text-purple-400 mt-1 shrink-0" />
                 <div>
                   <strong
                     className="text-white/90"
@@ -216,7 +206,10 @@ export default function DevMindset() {
               </li>
 
               <li className="flex gap-5 items-start">
-                <ClipboardList size={20} className="text-purple-400 mt-1" />
+                <ClipboardList
+                  size={20}
+                  className="text-purple-400 mt-1 shrink-0"
+                />
                 <div>
                   <strong
                     className="text-white/90"
@@ -233,7 +226,7 @@ export default function DevMindset() {
               </li>
 
               <li className="flex gap-5 items-start">
-                <Users size={20} className="text-purple-400 mt-1" />
+                <Users size={20} className="text-purple-400 mt-1 shrink-0" />
                 <div>
                   <strong
                     className="text-white/90"

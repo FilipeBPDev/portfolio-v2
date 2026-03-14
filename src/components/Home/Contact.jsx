@@ -111,6 +111,22 @@ export default function Contact() {
                              focus:outline-none focus:border-purple-400/40"
                 />
               </div>
+              <div>
+                <label
+                  className="block text-sm text-white/60 mb-2"
+                  style={{ color: "var(--color-button-text)" }}
+                >
+                  WhatsApp
+                </label>
+                <input
+                  type="text"
+                  placeholder="Seu WhatsApp"
+                  className="w-full px-4 py-3 rounded-xl 
+                             bg-black/30 border border-white/10 
+                             text-white placeholder-white/30 
+                             focus:outline-none focus:border-purple-400/40"
+                />
+              </div>
 
               <div>
                 <label

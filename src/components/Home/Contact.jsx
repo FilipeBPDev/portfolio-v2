@@ -103,6 +103,7 @@ export default function Contact() {
                   Seu nome
                 </label>
                 <input
+                  name="name"
                   type="text"
                   placeholder="Como posso te chamar?"
                   className="w-full px-4 py-3 rounded-xl 
@@ -119,6 +120,7 @@ export default function Contact() {
                   WhatsApp
                 </label>
                 <input
+                  name="whatsapp"
                   type="text"
                   placeholder="Seu WhatsApp"
                   className="w-full px-4 py-3 rounded-xl 
@@ -137,6 +139,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Para manter contato"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
@@ -144,6 +147,7 @@ export default function Contact() {
                              focus:outline-none focus:border-purple-400/40"
                 />
               </div>
+              <input type="text" name="website" style={{ display: "none" }} />
 
               <div>
                 <label
@@ -153,6 +157,7 @@ export default function Contact() {
                   Conte um pouco sobre o que você precisa
                 </label>
                 <textarea
+                  name="message"
                   rows="4"
                   placeholder="Conte um pouco sobre o que você precisa"
                   className="w-full px-4 py-3 rounded-xl 

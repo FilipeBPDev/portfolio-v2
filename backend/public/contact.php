@@ -30,6 +30,7 @@ $name = trim($data['name'] ?? '');
 $email = trim($data['email'] ?? '');
 $message = trim($data['message'] ?? '');
 $whatsapp = trim($data['whatsapp'] ?? '');
+$honeypot = trim($data['website'] ?? '');
 
 //validação de campos
 if (!$name || !$email || !$message) {
@@ -71,6 +72,18 @@ if ($whatsapp && !preg_match('/^[0-9\-\+\(\)\s]{8,20}$/', $whatsapp)) {
 
     echo json_encode([
         "error" => "Número inválido."
+    ]);
+
+    exit;
+}
+
+//validação bot
+if (!empty($honeypot)) {
+
+    http_response_code(400);
+
+    echo json_encode([
+        "error" => "Spam detectado."
     ]);
 
     exit;

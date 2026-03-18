@@ -1,0 +1,16 @@
+{
+    "name": "Portfolio PHP 8.2",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/var/www",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client"
+            ],
+            "settings": {
+                "intelephense.environment.phpVersion": "8.2"
+            }
+        }
+    }
+}   

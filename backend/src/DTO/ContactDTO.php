@@ -8,6 +8,7 @@ class ContactDTO
         public string $name,
         public string $email,
         public string $message,
-        public ?string $whatsapp = null
+        public ?string $whatsapp = null,
+        public string $honeypot = '',
     ) {}
 }

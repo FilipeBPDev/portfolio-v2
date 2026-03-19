@@ -1,13 +1,14 @@
 <?php
 
-namespace Src\Services;
+namespace App\Services;
 
+use App\DTO\ContactDTO;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 class MailService
 {
-    public function sendContactEmail($name, $email, $whatsapp, $message): bool
+    public function sendContact(ContactDTO $dto): bool
     {
         $mail = new PHPMailer(true);
 
@@ -15,41 +16,45 @@ class MailService
 
             // SMTP config
             $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com';
+            $mail->Host = $_ENV['SMTP_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'SEU_EMAIL@DOMINIO.COM';
-            $mail->Password = 'SUA_SENHA';
+            $mail->Username = $_ENV['SMTP_USER'];
+            $mail->Password = $_ENV['SMTP_PASS'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Port = $_ENV['SMTP_PORT'];
 
             // remetente (SEMPRE o seu domínio, nunca o do usuário)
-            $mail->setFrom('SEU_EMAIL@DOMINIO.COM', 'Portfolio');
+            $mail->setFrom($_ENV['SMTP_USER'], 'Portfolio');
 
             // destino
-            $mail->addAddress('SEU_EMAIL@DOMINIO.COM');
+            $mail->addAddress($_ENV['SMTP_USER']);
 
             // reply-to (aqui sim entra o usuário)
-            $mail->addReplyTo($email, $name);
+            $mail->addReplyTo($dto->email, $dto->name);
 
             // conteúdo
             $mail->isHTML(true);
             $mail->Subject = 'Novo contato do portfólio';
 
-            $whatsappText = $whatsapp ?: 'Não informado';
+            $whatsapp = $dto->whatsapp ?? 'Não inforado.';
+
+            // sanitização basica
+            $name = htmlspecialchars($dto->name);
+            $email = htmlspecialchars($dto->email);
+            $message = nl2br(htmlspecialchars($dto->message));
 
             $mail->Body = "
                 <h2>Novo contato recebido</h2>
 
                 <p><strong>Nome:</strong> {$name}</p>
                 <p><strong>Email:</strong> {$email}</p>
-                <p><strong>WhatsApp:</strong> {$whatsappText}</p>
+                <p><strong>WhatsApp:</strong> {$whatsapp}</p>
 
                 <p><strong>Mensagem:</strong></p>
                 <p>{$message}</p>
             ";
 
             return $mail->send();
-
         } catch (Exception $e) {
             return false;
         }

@@ -1,56 +1,75 @@
 <?php
 
-namespace Tests;
+namespace Tests\Validator;
 
-use PHPUnit\Framework\TestCase;
+use App\DTO\ContactDTO;
 use App\Validator\ContactValidator;
+use PHPUnit\Framework\TestCase;
 
 class ContactValidatorTest extends TestCase
 {
-    public function testShouldPassWithValidData()
+    private ContactValidator $validator;
+
+    protected function setUp(): void
     {
-        $validator = new ContactValidator();
-
-        $data = [
-            'name' => 'Filipe',
-            'email' => 'filipe@email.com',
-            'message' => 'Mensagem válida'
-        ];
-
-        $result = $validator->validate($data);
-
-        $this->assertArrayHasKey('success', $result);
-        $this->assertTrue($result['success']);
+        $this->validator = new ContactValidator();
     }
 
-    public function testShouldFailWithInvalidEmail()
+    private function makeDTO(array $overrides = []): ContactDTO
     {
-        $validator = new ContactValidator();
-
-        $data = [
-            'name' => 'Filipe',
-            'email' => 'email-invalido',
-            'message' => 'Mensagem válida'
-        ];
-
-        $result = $validator->validate($data);
-
-        $this->assertEquals('Email inválido.', $result['error']);
+        return new ContactDTO(
+            name: $overrides['name']     ?? 'João Silva',
+            email: $overrides['email']    ?? 'joao@email.com',
+            message: $overrides['message']  ?? 'Olá, quero mais informações.',
+            whatsapp: $overrides['whatsapp'] ?? null,
+            honeypot: $overrides['honeypot'] ?? '',
+        );
     }
 
-    public function testShouldFailWithSpam()
+    public function test_dto_valido_sem_erros(): void
     {
-        $validator = new ContactValidator();
+        $this->assertEmpty($this->validator->validate($this->makeDTO()));
+    }
 
-        $data = [
-            'name' => 'Filipe',
-            'email' => 'filipe@email.com',
-            'message' => 'Mensagem válida',
-            'website' => 'bot'
-        ];
+    public function test_nome_vazio_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['name' => '']));
+        $this->assertArrayHasKey('name', $errors);
+    }
 
-        $result = $validator->validate($data);
+    public function test_email_vazio_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['email' => '']));
+        $this->assertArrayHasKey('email', $errors);
+    }
 
-        $this->assertEquals('Spam detectado.', $result['error']);
+    public function test_email_invalido_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['email' => 'nao-é-um-email']));
+        $this->assertArrayHasKey('email', $errors);
+    }
+
+    public function test_mensagem_vazia_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['message' => '']));
+        $this->assertArrayHasKey('message', $errors);
+    }
+
+    public function test_whatsapp_invalido_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['whatsapp' => 'abc123']));
+        $this->assertArrayHasKey('whatsapp', $errors);
+    }
+
+    public function test_whatsapp_valido_nao_retorna_erro(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['whatsapp' => '+55 11 91234-5678']));
+        $this->assertArrayNotHasKey('whatsapp', $errors);
+    }
+
+    public function test_honeypot_preenchido_retorna_erro_de_spam(): void
+    {
+        $errors = $this->validator->validate($this->makeDTO(['honeypot' => 'sou um bot']));
+        $this->assertArrayHasKey('spam', $errors);
     }
 }

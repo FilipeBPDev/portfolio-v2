@@ -1,6 +1,53 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { sendContact } from "../../services/contactService,js";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    whatsapp: "",
+    honeypot: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [erro, setError] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      await sendContact(formData);
+
+      setSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        whatsapp: "",
+        honeypot: "",
+      });
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const glowRef = useRef(null);
 
   useEffect(() => {
@@ -21,6 +68,26 @@ export default function Contact() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  useEffect(() => {
+    if (!success) return;
+
+    const timer = setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [success]);
+
+  useEffect(() => {
+    if (!erro) return;
+
+    const timer = setTimeout(() => {
+      setError(null);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [erro]);
 
   return (
     <section
@@ -94,7 +161,7 @@ export default function Contact() {
               boxShadow: "var(--shadow-card)",
             }}
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   className="block text-sm text-white/60 mb-2"
@@ -105,6 +172,8 @@ export default function Contact() {
                 <input
                   name="name"
                   type="text"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Como posso te chamar?"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
@@ -122,6 +191,8 @@ export default function Contact() {
                 <input
                   name="whatsapp"
                   type="text"
+                  value={formData.whatsapp}
+                  onChange={handleChange}
                   placeholder="Seu WhatsApp"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
@@ -140,6 +211,8 @@ export default function Contact() {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Para manter contato"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
@@ -147,7 +220,13 @@ export default function Contact() {
                              focus:outline-none focus:border-purple-400/40"
                 />
               </div>
-              <input type="text" name="website" style={{ display: "none" }} />
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
+                onChange={handleChange}
+                style={{ display: "none" }}
+              />
 
               <div>
                 <label
@@ -159,6 +238,8 @@ export default function Contact() {
                 <textarea
                   name="message"
                   rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Conte um pouco sobre o que você precisa"
                   className="w-full px-4 py-3 rounded-xl 
                              bg-black/30 border border-white/10 
@@ -169,11 +250,22 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full mt-6 px-7 py-3 rounded-xl 
-                           bg-purple-600 hover:bg-purple-700 transition 
-                           text-white font-medium"
+                disabled={loading || success}
+                className={`w-full mt-6 px-7 py-3 rounded-xl 
+                text-white font-medium transition
+                ${
+                  success
+                    ? "bg-green-600"
+                    : erro
+                      ? "bg-red-600"
+                      : "bg-purple-600 hover:bg-purple-700"
+                }
+                disabled:opacity-50`}
               >
-                Iniciar conversa
+                {loading && "Enviando..."}
+                {success && "Mensagem enviada!"}
+                {erro && "Erro ao enviar"}
+                {!loading && !success && !erro && "Iniciar conversa"}
               </button>
 
               <p className="mt-4 text-xs text-white/40 text-center">

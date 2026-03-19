@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss(), // ativa Tailwind v4 via plugin oficial
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8000",
+        changeOrigin: true, 
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 });

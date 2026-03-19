@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Foto from "../../assets/img/img-profile/foto-perfil.jpeg";
+import Foto from "../../assets/img/img-profile/foto-pefil.webp";
 
 const focusAreas = {
   frontend: {
@@ -102,7 +102,8 @@ export default function AboutIntro() {
             >
               <img
                 src={Foto}
-                alt="Foto de Filipe Batista"
+                alt="Foto de Perfil"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>

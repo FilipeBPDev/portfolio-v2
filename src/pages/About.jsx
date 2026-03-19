@@ -9,8 +9,8 @@ export default function About() {
     <main>
       <AboutIntro />
       <AboutProfile />
-      <DevMindset />
       <AboutProjects />
+      <DevMindset />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import noise from "../assets/img/noise.jpg";
+import noise from "../assets/img/noise.webp";
 
 export default function Background({ theme }) {
   return (

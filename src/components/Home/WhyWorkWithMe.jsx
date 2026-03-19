@@ -5,7 +5,7 @@ import {
   TrendingUp,
   PackageCheck,
 } from "lucide-react";
-import Foto from "../../assets/img/img-profile/foto.png";
+import Foto from "../../assets/img/img-profile/foto.webp";
 
 export default function WhyWorkWithMe() {
   const glowRef = useRef(null);
@@ -178,6 +178,7 @@ export default function WhyWorkWithMe() {
               <img
                 src={Foto}
                 alt="Foto de Filipe Batista"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

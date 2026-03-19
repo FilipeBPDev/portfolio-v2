@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
-import Foto from "../../assets/img/cryptotracker.jpeg";
-import LogoCrypto from "../../assets/img/projects-logo/logo.png";
-import LogoFin from "../../assets/img/projects-logo/Logo-FinManager.png";
+import Foto from "../../assets/img/cryptotracker.webp";
+import LogoCrypto from "../../assets/img/projects-logo/logo.webp";
+import LogoFin from "../../assets/img/projects-logo/Logo-FinManager.webp";
 
 export default function Projects() {
   const glowRef = useRef(null);
@@ -89,6 +89,7 @@ export default function Projects() {
                 <img
                   src={project.logo}
                   alt={project.title}
+                  loading="lazy"
                   className="w-30 h-30 object-contain"
                 />
               </div>
@@ -179,6 +180,7 @@ export default function Projects() {
             <img
               src={Foto}
               alt="Preview do projeto"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>

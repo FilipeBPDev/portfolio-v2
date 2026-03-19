@@ -1,7 +1,7 @@
-import briefingImg from "../../assets/img/img1.jpg";
-import visualImg from "../../assets/img/img2.jpg";
-import devImg from "../../assets/img/img3.jpg";
-import deliveryImg from "../../assets/img/img4.jpg";
+import briefingImg from "../../assets/img/img1.webp";
+import visualImg from "../../assets/img/img2.webp";
+import devImg from "../../assets/img/img3.webp";
+import deliveryImg from "../../assets/img/img4.webp";
 import { useEffect, useRef } from "react";
 import { Lightbulb, Palette, Code2, Rocket } from "lucide-react";
 
@@ -102,6 +102,7 @@ export default function HowItWorks() {
                   <img
                     src={step.image}
                     alt={step.title}
+                    loading="lazy"
                     className="mb-6 rounded-xl w-full h-32 object-cover shadow-md"
                   />
                   <div

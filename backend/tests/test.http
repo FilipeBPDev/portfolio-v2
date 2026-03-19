@@ -1,0 +1,36 @@
+###envio
+POST http://localhost:8000/contact.php
+Content-Type: application/json
+
+{
+  "name": "Filipe",
+  "email": "teste@email.com",
+  "message": "Mensagem de teste",
+  "whatsapp": "11999999999",
+  "honeypot": ""
+}
+
+###
+
+POST http://localhost:8000/contact.php
+Content-Type: application/json
+
+{
+  "name": "",
+  "email": "email-invalido",
+  "message": "",
+  "whatsapp": "abc",
+  "honeypot": ""
+}
+
+### spam
+POST http://localhost:8000/contact.php
+Content-Type: application/json
+
+{
+  "name": "bot",
+  "email": "bot@bot.com",
+  "message": "span ",
+  "whatsapp": "11999999999",
+  "honeypot": "preenchido"
+}

@@ -26,3 +26,4 @@ dist-ssr
 # Backend
 backend/vendor/
 backend/.phpunit.result.cache
+backend/.env

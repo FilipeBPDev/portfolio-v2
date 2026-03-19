@@ -16,7 +16,7 @@ class MailService
 
             // SMTP config
             $mail->isSMTP();
-            $mail->Host = $_ENV['SMTP_HOST'];
+            $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = $_ENV['SMTP_USER'];
             $mail->Password = $_ENV['SMTP_PASS'];

@@ -32,25 +32,25 @@ export default function HowItWorks() {
       icon: Lightbulb,
       title: "Alinhamento inicial",
       desc: "Alinhamos expectativas e necessidades antes de qualquer decisão. Tudo começa com clareza e direção.",
-      image: briefingImg, // sugestão: reunião ou brainstorming
+      image: briefingImg,
     },
     {
       icon: Palette,
       title: "Direção visual validada",
       desc: "Definimos a proposta visual inicial antes de avançar, garantindo alinhamento desde o começo.",
-      image: visualImg, // sugestão: wireframe ou tela de design
+      image: visualImg,
     },
     {
       icon: Code2,
       title: "Desenvolvimento",
       desc: "O projeto evolui com organização e checkpoints, permitindo ajustes contínuos e evitando surpresas no final.",
-      image: devImg, // sugestão: tela de código ou dev trabalhando
+      image: devImg,
     },
     {
       icon: Rocket,
       title: "Entrega final e revisão",
       desc: "Após os ajustes finais, entrego o projeto revisado, testado e alinhado ao que foi combinado.",
-      image: deliveryImg, // sugestão: mockup final ou cliente feliz
+      image: deliveryImg,
     },
   ];
 
@@ -67,7 +67,7 @@ export default function HowItWorks() {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold text-purple-400">
-            Como funciona o processo do seu projeto{" "}
+            Como funciona o processo do projeto{" "}
           </h2>
           <p className="mt-10 text-white/70 max-w-4xl mx-auto">
             Do primeiro contato à entrega final, sigo um processo claro e

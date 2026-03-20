@@ -158,7 +158,8 @@ export default function Projects() {
             </ul>
 
             <a
-              href="#"
+              href="https://github.com/FilipeBPDev/crypto-tracker"
+              target="_blank"
               className="inline-block mt-8 px-7 py-3 rounded-xl 
                          bg-purple-600 hover:bg-purple-700 transition 
                          text-white font-medium"

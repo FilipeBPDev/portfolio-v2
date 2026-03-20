@@ -70,11 +70,10 @@ export default function DevMindset() {
 
             <p className="text-white/70 leading-relaxed">
               Minha jornada foi construída a partir de experiências reais com
-              sistemas em produção, código legado e ambientes onde decisões
-              técnicas têm impacto direto no negócio e na rotina do time. Sempre
-              procuro entender o contexto completo: regras de negócio, histórico
-              do sistema, limitações técnicas, expectativas de quem usa e,
-              principalmente, quem irá manter aquele código no futuro.
+              sistemas em produção, código legado e ambientes onde decisões têm
+              impacto direto no negócio e na rotina do time e do usuário final.
+              Sempre procuro entender o contexto completo: regras de negócio,
+              limitações técnicas, e principalmente as expectativas de quem usa.
               <br />
               <br />
               Tomo decisões considerando arquitetura, legibilidade e
@@ -91,7 +90,6 @@ export default function DevMindset() {
             </p>
           </div>
 
-          {/* engineering notes */}
           <div className="flex flex-col gap-4">
             {ENGINEERING_NOTES.map((note) => {
               const isOpen = openNotes[note.id];
@@ -181,9 +179,9 @@ export default function DevMindset() {
                     Comunicação técnica clara
                   </strong>
                   <p className="mt-2">
-                    Consigo traduzir decisões técnicas para diferentes níveis do
-                    time, facilitando alinhamento entre desenvolvimento, produto
-                    e áreas não técnicas, evitando ruídos e retrabalho.
+                    Consigo traduzir decisões técnicas para diferentes níveis,
+                    facilitando alinhamento entre desenvolvimento, produto e
+                    áreas não técnicas, evitando ruídos e retrabalho.
                   </p>
                 </div>
               </li>
@@ -218,9 +216,9 @@ export default function DevMindset() {
                     Organização e processos
                   </strong>
                   <p className="mt-2">
-                    Valorizo processos simples e bem definidos, que ajudam o
-                    time a evoluir o sistema com segurança, previsibilidade e
-                    menos dependência de pessoas específicas.
+                    Valorizo processos simples e bem definidos, que ajudam a
+                    evoluir o sistema com segurança, previsibilidade e menos
+                    dependência de pessoas específicas.
                   </p>
                 </div>
               </li>
@@ -235,7 +233,6 @@ export default function DevMindset() {
                     Colaboração e visão coletiva
                   </strong>
                   <p className="mt-2">
-                    Encaro código como uma forma de comunicação entre pessoas.
                     Procuro respeitar decisões passadas, colaborar com o time
                     atual e facilitar o trabalho de quem dará continuidade no
                     futuro.

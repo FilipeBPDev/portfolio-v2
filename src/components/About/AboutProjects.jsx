@@ -1,30 +1,7 @@
 import { useRef } from "react";
 import { FaFolderOpen } from "react-icons/fa";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-
-const PROJECTS = [
-  {
-    id: 1,
-    title: "Sistema de Relatórios Dinâmicos",
-    description:
-      "Sistema backend focado em geração de relatórios com múltiplos filtros, tratando cenários de dados inconsistentes e legado.",
-    stack: ["PHP", "MySQL", "SQL"],
-  },
-  {
-    id: 2,
-    title: "SPA Portfolio Fullstack",
-    description:
-      "Aplicação single page com foco em performance, organização de componentes e integração frontend/backend.",
-    stack: ["React", "Tailwind", "PHP"],
-  },
-  {
-    id: 3,
-    title: "Automação de Processos Internos",
-    description:
-      "Ferramentas para reduzir tarefas manuais e aumentar previsibilidade operacional em sistemas existentes.",
-    stack: ["PHP", "Scripts", "MySQL"],
-  },
-];
+import { PROJECTS } from "../../data/projects";
 
 export default function AboutProjects() {
   const scrollRef = useRef(null);
@@ -222,9 +199,12 @@ export default function AboutProjects() {
                     bg-gradient-to-br from-purple-500/10 to-transparent"
                       style={{ border: "1px solid var(--color-border-soft)" }}
                     >
-                      <span className="text-sm text-white/30">
-                        preview / screenshot
-                      </span>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="h-full w-full object-cover rounded-xl opacity-90
+                        transition duration-500 group-hover:opacity-100"
+                      />
                     </div>
                   </div>
                 </article>

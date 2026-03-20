@@ -2,32 +2,33 @@ import { useEffect, useRef, useState } from "react";
 import Foto from "../../assets/img/img-profile/foto-pefil.webp";
 
 const focusAreas = {
-  frontend: {
-    title: "Front-end Engineering",
-    text: "Interfaces performáticas, componentes bem estruturados e atenção aos detalhes visuais.",
-  },
   ux: {
-    title: "UX & Product Thinking",
-    text: "Decisões guiadas por clareza, fluxo do usuário e experiência real de uso.",
+    title: "UX e Pensamento de Produto",
+    text: "Decisões baseadas no fluxo real do usuário, priorizando clareza, acessibilidade e experiência prática.",
   },
+  frontend: {
+    title: "Desenvolvimento Front-end",
+    text: "Interfaces eficientes e componentes modulares, com atenção ao desempenho, responsividade e consistência visual.",
+  },
+
   backend: {
-    title: "Back-end & Integrações",
-    text: "APIs, formulários, lógica de negócio e comunicação entre sistemas.",
+    title: "Desenvolvimento Back-end e Integrações",
+    text: "APIs, lógica de negócios e comunicação entre sistemas de forma escalável, segura e fácil de manter.",
   },
 };
 
 const principles = [
   {
-    title: "Clarity over complexity",
-    text: "Interfaces e código devem ser fáceis de entender — para usuários e para quem mantém.",
+    title: "Clareza no código",
+    text: "Código e interfaces devem ser compreensíveis, beneficiando usuários e equipes.",
   },
   {
-    title: "UX-driven decisions",
-    text: "Estrutura, fluxo e layout partem do uso real, não apenas da implementação.",
+    title: "Decisões guiadas pelo UX",
+    text: "Fluxos e layouts são pensados a partir do uso real e dos objetivos do produto.",
   },
   {
-    title: "Code as communication",
-    text: "Código é uma forma de comunicação entre pessoas, não só instruções para máquinas.",
+    title: "Comunicação clara",
+    text: "A clareza na comunicação facilita colaboração e alinhamento entre equipes. ",
   },
 ];
 
@@ -71,13 +72,14 @@ export default function AboutIntro() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* header */}
-        <div className="max-w-3xl mb-6">
-          <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+        <div className="max-w-8xl mb-15">
+          <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-10">
             Filipe Batista
           </h1>
           <p className="mt-3 text-lg text-white/70">
-            Desenvolvedor focado em interfaces claras, código organizado e
-            experiência do usuário.
+            Desenvolvedor Full Stack com foco em arquitetura, modelagem de dados
+            e performance. Trabalho das decisões de schema até o componente
+            final, sem perder de vista quem vai manter o código.
           </p>
         </div>
 
@@ -95,7 +97,7 @@ export default function AboutIntro() {
                flex items-center justify-center overflow-hidden"
               style={{
                 aspectRatio: "3 / 4",
-                maxHeight: "400px",
+                maxHeight: "700px",
                 padding: "0.75rem",
                 border: "1px solid var(--color-border-soft)",
               }}
@@ -117,7 +119,7 @@ export default function AboutIntro() {
           </div>
           {/* content */}
           <div className="lg:col-span-2 flex flex-col gap-6">
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex gap-3 flex-wrap mb-4">
               {Object.keys(focusAreas).map((key) => (
                 <button
                   key={key}
@@ -140,7 +142,7 @@ export default function AboutIntro() {
             </div>
 
             <div
-              className="rounded-2xl p-6 bg-white/5 backdrop-blur-xl transition"
+              className="rounded-2xl p-8 bg-white/5 backdrop-blur-xl transition h-42"
               style={{
                 border: "1px solid var(--color-border-soft)",
                 boxShadow: "var(--shadow-card)",
@@ -205,17 +207,16 @@ export default function AboutIntro() {
                         className="leading-relaxed"
                         style={{ color: "var(--color-text-soft)" }}
                       >
-                        Esses princípios orientam minhas decisões técnicas e de
-                        produto, desde o primeiro briefing até a entrega e
-                        manutenção do código.
+                        Esses princípios orientam minhas decisões técnicas,
+                        desde o primeiro briefing até a entrega e manutenção do
+                        código.
                       </p>
                       <p
                         className="mt-2 leading-relaxed"
                         style={{ color: "var(--color-text-soft)" }}
                       >
-                        Eles ajudam a alinhar expectativas com o time,
-                        stakeholders e facilitam a evolução do produto no longo
-                        prazo.
+                        Eles ajudam a alinhar expectativas e facilitam a
+                        evolução do produto no longo prazo.
                       </p>
                     </div>
                   )}

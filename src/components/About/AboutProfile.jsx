@@ -31,14 +31,13 @@ export default function AboutProfile() {
               <p>
                 Minha atuação envolve tanto front-end quanto back-end, passando
                 por interfaces em React, regras de negócio em PHP/Laravel, banco
-                de dados MySQL, relatórios complexos e integrações. Gosto de
-                entender o problema antes da solução — isso influencia desde a
-                experiência do usuário até a forma como os dados são modelados e
-                mantidos.
+                de dados SQL, relatórios complexos e integrações. Gosto de
+                entender o problema antes da solução, desde a experiência do
+                usuário até a forma como os dados são modelados e mantidos.
               </p>
 
               <p>
-                Tenho familiaridade com ambientes Linux, versionamento,
+                Trabalho em ambiente Linux, e constante versionamento de código,
                 organização de projetos e comunicação em times distribuídos.
                 Valorizo código como forma de comunicação entre pessoas,
                 decisões guiadas pelo uso real e processos que facilitem a
@@ -47,7 +46,7 @@ export default function AboutProfile() {
               </p>
             </div>
 
-            {/* Currículo */}
+            {/* curriculo */}
             <a
               href="/cv-filipe-batista.pdf"
               target="_blank"
@@ -127,11 +126,13 @@ export default function AboutProfile() {
                 <span>Linux — ambiente, deploy e rotina remota</span>
               </li>
             </ul>
-
-            <div className="mt-6 text-xs opacity-60 leading-relaxed">
-              Experiência prática em projetos reais, correções em produção e
-              evolução contínua de sistemas existentes.
-            </div>
+            <h6 className="text-sm mt-5 font-medium mb-5 opacity-80">
+              <span>
+                {" "}
+                Experiência prática em projetos em produção e evolução contínua
+                de sistemas existentes.
+              </span>
+            </h6>
           </div>
         </div>
       </div>

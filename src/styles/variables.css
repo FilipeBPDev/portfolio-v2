@@ -3,9 +3,10 @@
 
   /* Light theme base */
   --color-bg: #f6f4fb;        /* fundo claro com leve roxo */
-  --color-bg-soft: #ffffff;   /* cards / navbar */
+  --color-bg-soft: #e6defddc;   /* cards / navbar */
   --color-text: #1b152b;      /* texto escuro sofisticado */
   --color-text-soft: #5a5275;
+  --color-text-gray: #5a5275;
   --color-button-text: #5b2b9b;
   --color-button-border: #5b2b9b;
   --color-border-soft: rgba(124, 77, 255, 0.25);
@@ -50,13 +51,12 @@
 
 
 
-/* ============================
-   DARK MODE
-============================ */
+/*dark */
 .dark {
   --color-bg: #181728;
   --color-bg-soft: #1f1e33;
   --color-text: #f5f0e8f0;
+  --color-text-gray: #5a5275;;
   --color-text-soft: #b7b3d6;
   --color-button-text: #c09ce2;
   --color-button-border: #c09ce2;

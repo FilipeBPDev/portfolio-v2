@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { sendContact } from "../../services/contactService,js";
+import { sendContact } from "../../services/contactService.js";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
